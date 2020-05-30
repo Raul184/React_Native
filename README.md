@@ -1,1 +1,3 @@
-"# React_Native Apps buildt with CLI"
+"# React_Native App built with CLI"
+
+A performance timer app
