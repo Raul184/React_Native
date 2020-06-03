@@ -1,8 +1,9 @@
+/* eslint-disable prettier/prettier */
 import React, {useState} from 'react';
 import {homeStyles} from './homeViewStyles';
-import { View, ImageBackground } from 'react-native';
+import {View, ImageBackground} from 'react-native';
 // Comps.
-import Header from '../header/Header'; 
+import Header from '../header/Header';
 import Timer from '../timer/SetTimer';
 import Reset from '../reset/Reset';
 import PlayPause from '../playPause/PlayPause';
@@ -26,14 +27,13 @@ function Homeview() {
       <ImageBackground
         source={require('./lion.webp')}
         resizeMode="cover"
-        style={homeStyles.imgBackg}
-      >
+        style={homeStyles.imgBackg}>
         <Header />
         <Timer isActive={isActive} time={time} setTime={setTime} />
-        { 
+        {
           time > 0 &&  <Reset reset={reset} />
         }
-        {isActive ?  
+        {isActive ?
           <PlayPause set={false} toggle={toggle} />
           :
           <PlayPause set={true} toggle={toggle} />
